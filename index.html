@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
   </head>
 
   <body>
@@ -59,13 +60,66 @@
         <div class="h-64 rounded-md shadow-x1 bg-slate-800"></div>
       </div>
     </section>
+
     <section
       id="highlighted"
-      class="py-8 h-96 w-full bg-slate-100 relative overflow-hideden"
-      
-    ><div class="left-0 top-0 bottom-0 grid grid-cols-6 gap-8 absolute">
-<div class="w-96 h-64 ruonded-md shadow-xl bg-orange-600 "></div>
-    </div>
-</section>
+      class="py-8 h-72 w-full bg-slate-100 relative overflow-hideden"
+    >
+      <div class="legt-0 top-0 top-0 bottom-0 p-8 flex gap-12 absolute">
+        <div class="w-[45vw] h-56 rounded-md shadow-x1 bg-orange-600"></div>
+        <div class="w-[45vw] h-56 rounded-md shadow-x1 bg-orange-600"></div>
+      </div>
+      <div
+        class="left-2 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-white absolute -translate-y-1/2 shadow-x1 flex justify-center items-center"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div
+        class="right-2 top-1/2 w-10 h-10 rounded-full bg-slate-800 text-800 text-white absolute -translate-y-1/2 shadow-x1 flex justify-center items-center"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    </section>
+    <section
+      id="products"
+      class="p-8 w-full bg-orange-600 grid grid-cols-3 gap-8"
+    >
+      <div
+        class="w-96 p-4 bg-white rounded-md shadow flex flex-col items-streach"
+      >
+        <figure class="w-100">
+          <img src="./assets/images/imagem1.jpg" alt="" class="max-w-100" />
+        </figure>
+        <div class="flex flex-col pat-4">
+          <span class="text-xs line-through text-green-500">R$2.500,00</span>
+
+          <div class="flex items-center">
+            <span class="text-4xl">R$ 1,9999,99</span>
+            <span class="ml-2 text-green-500">
+              15%
+              <i class="fa-solid fa-tag"></i>
+            </span>
+          </div>
+
+          <div class="text-green-600 text-sm pt-2">
+            <span>entrega gratis</span>
+            <span class="ml-2">
+              <i class="fa-solid fa-truck-fast"></i>
+            </span>
+          </div>
+
+          <div class="text-slate-600 text-sm pt-2"></div>
+          <p>hoje eu estou aqui</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full bg-slate-800 p-4 flex justify-center">
+      <strong class="text-white">powered with</strong>
+      <span class="text-orange-600 px-2">
+        <i class="fa-solid fa-mug-hot"></i>
+      </span>
+      <strong class="text-white">by me.</strong>
+    </footer>
   </body>
 </html>
