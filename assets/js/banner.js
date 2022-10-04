@@ -1,4 +1,4 @@
-class banner {
+class Banner {
   constructor(settings) {
     this.settings = Object.assign(
       {
@@ -14,7 +14,7 @@ class banner {
 
   goto(index) {
     const { data, target, timeout } = this.settings;
-    if (index >= this.settings.data.lenght || index < 0) {
+    if (index >=data.length || index < 0) {
       index = 0;
     }
 
@@ -23,18 +23,18 @@ class banner {
 
     this.index = index;
 
-    const currentimage = target.queryselector(
+    const currentImage = target.querySelector(
       `img[src="${current.image_url}"]`
     );
 
-    const nextime = target.queryselector(`img[src="${next.image_url}"]`);
+    const nextImage = target.querySelector(`img[src="${next.image_url}"]`);
 
-    currentimage.classlist.remove("active");
-    nextime.classlist.add("active");
-    clearTimeout(this.insterval);
+    currentImage.classList.add("opacity-0");
+    nextImage.classList.remove("opacity-0");
+    clearTimeout(this.insterval)
     this.insterval = setTimeout(() => {
-      this.goto(this.index + 1);
-    }, timeout);
+      this.goto(this.index + 1)
+    }, timeout)
   }
 
   render() {
@@ -47,7 +47,7 @@ class banner {
         createElement("img", {
           src: item.image_url,
           alt: item.name,
-          className: "w-full h-full  left-0 top-0 z-0 absolute",
+          className: "w-full h-full  left-0 top-0 z-0 absolute opacity-0",
         })
       )
     );
@@ -56,7 +56,7 @@ class banner {
       "div",
       {
         className:
-          "z-10 bottom-2 left-1 absolute" + "flex justify-center items-center",
+          "z-10 bottom-2 left-1 absolute " + "flex justify-center items-center",
       },
       ...data.map((_, index) =>
         createElement("span", {
